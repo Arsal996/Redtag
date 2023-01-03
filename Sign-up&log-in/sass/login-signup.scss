@@ -1,0 +1,570 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;1,300&family=Tajawal:wght@300;400;500&family=Ubuntu:wght@300&display=swap');
+@import "log-sign";
+
+* {
+    font-family: 'Tajawal', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+$red: #ff0000;
+$white-clr: #fff;
+$black-clr: rgb(0, 0, 0);
+$light-clr: rgb(150, 150, 150);
+$light-grey: #a0a0a0;
+
+html {
+    font-size: 75%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: $white-clr;
+
+}
+
+.header-for-mbl{
+      
+    display: flex; 
+    justify-content: space-between;
+    padding: 1.5rem 5%;
+    visibility: hidden;
+
+    .logo-mbl a{
+         img{
+             width: 130px;
+             margin-left: .4rem;
+         }
+    }
+    .cart-mbl a{
+        img{
+            width: 27px;
+            margin-right: -.3rem;
+            margin-top: -.3rem
+        }
+   }
+    
+}
+
+// login page css
+
+// mbl menu for mbl 
+
+.mbl-menu{
+
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: none;
+    z-index: 20;
+     
+     .menu-items{
+         display: flex;
+         padding: 1rem 2rem;
+         justify-content: space-between;
+         text-align: center;
+         align-items: center;
+         width: 100%;
+         background-color: $white-clr;
+
+        a{
+            img{
+                width: 27px;
+                height: 27px;
+             }
+             #categ1{
+                width: 35px;
+                height: 25px;
+             }
+             p{
+                color: $black-clr;
+                margin-top: .5rem;
+             }
+        }
+     }
+}
+
+.main-login-section {
+    @include main-section();
+
+    .login-form {
+        width: 68%;
+
+        .f-heading {
+            font-size: 3rem;
+        }
+
+        form {
+            width: 97%;
+
+            .form-content {
+
+                position: relative;
+
+                input {
+                    @include input(2rem, 1.5rem 5.5rem);
+                    margin-left: 1rem;
+                }
+
+                span {
+                    position: absolute;
+                    top: 50;
+                    width: 60px;
+                    height: 58px;
+                    left: 0;
+                    top: 24px;
+                    border-radius: 20px;
+                    padding: 2rem;
+                    box-shadow: 0px 0px 2px 2px #e0e0e0;
+                    background-color: $white-clr;
+
+                    img {
+                        width: 30px;
+                        background-color: #ff0000;
+                        position: absolute;
+                        text-align: center;
+                        left: 15px;
+                        top: 14px;
+
+                    }
+                }
+
+            }
+
+            .remb-fgt {
+                display: flex;
+                justify-content: space-between;
+                width: 90%;
+                margin-top: 1.9rem;
+            }
+
+            .remb-ck-box {
+                align-items: center;
+                display: flex;
+
+                input {
+                    width: 24px;
+                    height: 24px;
+                    cursor: pointer;
+                }
+
+                label {
+                    font-size: 1.3rem;
+                    margin-left: .7rem;
+                    color: #696969;
+                }
+            }
+
+            .fgt-psw {
+                a {
+                    font-size: 1.3rem;
+                    color: $black-clr;
+                    text-decoration: underline;
+                }
+            }
+
+            .login-btn {
+
+                margin-top: 3rem;
+
+                button {
+                    padding: 1rem;
+                    width: 35%;
+                    border-radius: 30px;
+                    background-color: $black-clr;
+                    cursor: pointer;
+                    transition: all .3s;
+
+                    a {
+                        font-size: 1.3rem;
+                        font-weight: 500;
+                        text-transform: uppercase;
+                        color: $white-clr;
+
+                    }
+
+                    &:hover {
+                        background-color: $white-clr;
+                        border: 2px solid $black-clr;
+                        padding: .9rem;
+                    }
+
+                    &:hover a {
+                        color: $black-clr;
+                        font-weight: 600;
+                    }
+                }
+            }
+
+            .sigup-link {
+                margin-top: 2rem;
+
+                span {
+                    font-size: 1.4rem;
+                    font-weight: 500;
+
+                    a {
+                        color: $black-clr;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    .reward-details {
+        background-color: #f0f0f0;
+        width: 32%;
+
+        @include rewards();
+    }
+}
+
+
+// signup page css 
+
+.main-signup-section {
+
+    @include main-section();
+
+    .signup-form {
+
+        width: 72%;
+
+        .s-heading {
+            text-transform: uppercase;
+            font-size: 2.6rem;
+            letter-spacing: 1px;
+        }
+
+        form {
+            width: 97%;
+            margin-top: 2rem;
+
+            .input-container {
+                margin-top: 2.4rem;
+                font-family: "Tajawal Bold";
+                width: 100%;
+                display: flex;
+
+              .input-content{
+                 
+                width: 100%;
+
+                label {
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    width: 100%;
+                }
+
+                input {
+                    @include input(1rem,1.5rem);
+                }
+                select{
+                    @include input(1rem,1.5rem);
+                    cursor: pointer;
+                    position: relative;
+                }
+                .custom-desn-nat{
+                    position: absolute;
+                    width: 25px;
+                    height: 35px;
+                    margin-left: -2.4rem;
+                    margin-top: 1.4rem;
+                    background-color: $white-clr;
+                    cursor: pointer;
+
+                    i{
+                       font-size: 1.7rem;
+                       margin-top: 1.2rem;
+                    }
+                }
+                .mbl-num{
+                    display: flex;
+                    gap: 1.4rem;
+
+                    select{
+                        width: 20%;
+                        padding: 1.5rem 1rem ;
+                        cursor: pointer;
+                        position: relative;
+                    }
+                    .custom-design{
+                         position: absolute;
+                         width: 25px;
+                         height: 35px;
+                         margin-left: 4.85rem;
+                         margin-top: 1.4rem;
+                         background-color: $white-clr;
+                         cursor: pointer;
+
+                         i{
+                            font-size: 1.7rem;
+                            margin-top: 1.2rem;
+                         }
+                     
+                    }
+                    input{
+                        width: 61.4%;
+                    }
+                }
+              }
+            }
+            .signup-btn {
+
+                margin-top: 3rem;
+                justify-content: center;
+                text-align: center;
+
+                button {
+                    padding: 1rem;
+                    width: 35%;
+                    border-radius: 30px;
+                    background-color: #e4e4e4;
+                    margin-left: -2rem;
+                    color: $light-clr;
+                    transition: all .3s;
+                    font-size: 1.4rem;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                }
+            }
+            .diff-link{
+                 margin-top: 2.5rem;
+                 text-align: center;
+
+                 span{
+                    font-size: 1.2rem;
+                    color: $light-clr;
+
+                    a{
+                        color: $black-clr;
+                        font-weight: 600;
+                        text-decoration: underline;
+                    }
+                 }
+            }
+        }
+    }
+
+    .reward-details {
+        background-color: #f0f0f0;
+        width: 32%;
+        height: 33rem;
+        @include rewards();
+    }
+}
+
+.signup-footer-for-mbl-tab{
+    display: none;
+     background-color: #FFE4E6;
+     width: 100%;
+     padding: 1.5rem;
+     padding-bottom: 9rem;
+
+     h4{
+        font-size: 3rem;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+
+        span{
+            color: $red;
+        }
+     }
+     p{
+        font-size: 1.2rem;
+        margin-top: 1rem;
+     }
+}
+
+.signup-btn-for-tm{
+      background-color: $white-clr;
+      width: 100%;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      height: 90px;
+      display: flex;
+      opacity: 0;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+
+      button{
+        padding: .85rem;
+        width: 70%;
+        border-radius: 30px;
+        background-color: #e4e4e4;
+        color: $light-clr;
+        transition: all .3s;
+        font-size: 1.3rem;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+}
+
+
+// media query css 
+
+@media only screen and (max-width:750px){
+    .mbl-menu{
+        display: block;
+    }
+    .header-for-mbl{
+        visibility: visible;
+    }
+    .hide-for-tm{
+         display: none;
+    }
+    .reward-details {
+        background-color: #f0f0f0;
+        width: 32%;
+        display: none;
+    }
+    .main-login-section {
+        margin-top: 0;
+        padding-left: 2rem;
+        padding-bottom: 4rem;
+    }
+    .main-login-section .login-form {
+        width: 100%;
+    }
+    .main-login-section .login-form form .form-content input {
+        width: 97%;
+        padding: 1rem 4rem;
+        border-radius: 17px;
+        font-size: 1.2rem;
+    }
+    .main-login-section .login-form form .form-content span {
+        top: 51;
+        width: 40px;
+        height: 38px;
+        left: 0;
+        top: 24px;
+        border-radius: 17px;
+        padding: 1.91rem;
+    }
+    .main-login-section .login-form form .form-content span img {
+        width: 22px;
+        left: 13px;
+        top: 12px;
+    }
+    .main-login-section .login-form .f-heading {
+        font-size: 2rem;
+    }
+    .main-login-section .login-form form .remb-fgt {
+        width: 99%;
+    }
+    .main-login-section .login-form form .remb-ck-box label {
+        font-size: 1.2rem;
+    }
+    .main-login-section .login-form form .fgt-psw a {
+        font-size: 1.2rem;
+    }
+    .main-login-section .login-form form .login-btn button {
+        padding: 0.9rem;
+        width: 75%;
+    }
+    .main-login-section .login-form form .login-btn {
+        display: flex;
+        justify-content: center;
+    }
+    .main-login-section .login-form form .sigup-link{
+        display: flex;
+        justify-content: center;
+        margin-top: 1.5rem;
+    }
+    .main-login-section .login-form form .sigup-link span {
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+
+    // signup from media query 
+    
+    .main-signup-section .signup-form form .signup-btn {
+        display: none;
+    }
+    .signup-footer-for-mbl-tab{
+        display: block;
+    }
+    .signup-btn-for-tm{
+        opacity: 1;
+    }
+    .main-signup-section {
+        margin-top: 0;
+        padding-bottom: 4rem;
+    }
+    .main-signup-section .signup-form {
+        width: 100%;
+        padding-left: 1.5rem;
+    }
+
+    .main-signup-section .signup-form form .input-container {
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .main-signup-section .signup-form form .input-container .input-content input {
+        width: 100%;
+        padding: 1rem;
+        margin-top: 1.2rem;
+        border-radius: 17px;
+        font-size: 1.2rem;
+    }
+    .main-signup-section .signup-form form .input-container .input-content label {
+        font-size: 1.1rem;
+    }
+    .main-signup-section .signup-form form .input-container .input-content {
+        width: 100%;
+        margin-top: 2rem;
+    }
+    .main-signup-section .signup-form form .input-container .input-content select {
+        width: 100%;
+        padding: 1rem;
+        margin-top: 1rem;
+        border-radius: 17px;
+        font-size: 1.2rem;
+    }
+    .main-signup-section .signup-form form .input-container .input-content .mbl-num select {
+        width: 90px;
+        padding: 1rem;
+
+    }
+    .main-signup-section .signup-form form .input-container .input-content .mbl-num input {
+        width: 100%;
+    }
+    .main-signup-section .signup-form form .input-container .input-content .mbl-num .custom-design {
+        position: absolute;
+        width: 22px;
+        border-radius: 15px;
+        height: 25px;
+        margin-left: 5.4rem;
+        margin-top: 1.4rem;
+        // display: none;
+    }
+    .main-signup-section .signup-form form .input-container .input-content .mbl-num .custom-design i {
+        font-size: 1.5rem;
+        margin-top: 1rem;
+    }
+    .main-signup-section .signup-form form .input-container .input-content .custom-desn-nat {
+        width: 25px;
+        height: 25px;
+        border-radius: 20px;
+        margin-left: -2.2rem;
+        margin-top: 2rem;
+    }
+    .main-signup-section .signup-form form .input-container .input-content .custom-desn-nat i {
+        font-size: 1.5rem;
+        margin-top: 0.3rem;
+    }
+    .main-signup-section .signup-form .s-heading {
+        font-size: 1.7rem;
+        margin-bottom: -1.5rem;
+    }
+}

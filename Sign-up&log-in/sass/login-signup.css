@@ -1,0 +1,571 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;1,300&family=Tajawal:wght@300;400;500&family=Ubuntu:wght@300&display=swap");
+* {
+  font-family: "Tajawal", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+
+html {
+  font-size: 75%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fff;
+}
+
+.header-for-mbl {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 5%;
+  visibility: hidden;
+}
+.header-for-mbl .logo-mbl a img {
+  width: 130px;
+  margin-left: 0.4rem;
+}
+.header-for-mbl .cart-mbl a img {
+  width: 27px;
+  margin-right: -0.3rem;
+  margin-top: -0.3rem;
+}
+
+.mbl-menu {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: none;
+  z-index: 20;
+}
+.mbl-menu .menu-items {
+  display: flex;
+  padding: 1rem 2rem;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  background-color: #fff;
+}
+.mbl-menu .menu-items a img {
+  width: 27px;
+  height: 27px;
+}
+.mbl-menu .menu-items a #categ1 {
+  width: 35px;
+  height: 25px;
+}
+.mbl-menu .menu-items a p {
+  color: rgb(0, 0, 0);
+  margin-top: 0.5rem;
+}
+
+.main-login-section {
+  width: 100%;
+  margin-top: 5rem;
+  display: flex;
+  padding: 2rem 2%;
+  padding-bottom: 8rem;
+  justify-content: space-between;
+}
+.main-login-section .login-form {
+  width: 68%;
+}
+.main-login-section .login-form .f-heading {
+  font-size: 3rem;
+}
+.main-login-section .login-form form {
+  width: 97%;
+}
+.main-login-section .login-form form .form-content {
+  position: relative;
+}
+.main-login-section .login-form form .form-content input {
+  width: 90%;
+  padding: 1.5rem 5.5rem;
+  margin-top: 2rem;
+  border-radius: 10px;
+  font-size: 1.3rem;
+  border: 1px solid rgb(238, 237, 237);
+  box-shadow: 0px 0px 2px 2px #f1f0f0;
+  margin-left: 1rem;
+}
+.main-login-section .login-form form .form-content span {
+  position: absolute;
+  top: 50;
+  width: 60px;
+  height: 58px;
+  left: 0;
+  top: 24px;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0px 0px 2px 2px #e0e0e0;
+  background-color: #fff;
+}
+.main-login-section .login-form form .form-content span img {
+  width: 30px;
+  background-color: #ff0000;
+  position: absolute;
+  text-align: center;
+  left: 15px;
+  top: 14px;
+}
+.main-login-section .login-form form .remb-fgt {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin-top: 1.9rem;
+}
+.main-login-section .login-form form .remb-ck-box {
+  align-items: center;
+  display: flex;
+}
+.main-login-section .login-form form .remb-ck-box input {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+.main-login-section .login-form form .remb-ck-box label {
+  font-size: 1.3rem;
+  margin-left: 0.7rem;
+  color: #696969;
+}
+.main-login-section .login-form form .fgt-psw a {
+  font-size: 1.3rem;
+  color: rgb(0, 0, 0);
+  text-decoration: underline;
+}
+.main-login-section .login-form form .login-btn {
+  margin-top: 3rem;
+}
+.main-login-section .login-form form .login-btn button {
+  padding: 1rem;
+  width: 35%;
+  border-radius: 30px;
+  background-color: rgb(0, 0, 0);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.main-login-section .login-form form .login-btn button a {
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #fff;
+}
+.main-login-section .login-form form .login-btn button:hover {
+  background-color: #fff;
+  border: 2px solid rgb(0, 0, 0);
+  padding: 0.9rem;
+}
+.main-login-section .login-form form .login-btn button:hover a {
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+}
+.main-login-section .login-form form .sigup-link {
+  margin-top: 2rem;
+}
+.main-login-section .login-form form .sigup-link span {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.main-login-section .login-form form .sigup-link span a {
+  color: rgb(0, 0, 0);
+  text-decoration: underline;
+}
+.main-login-section .reward-details {
+  background-color: #f0f0f0;
+  width: 32%;
+}
+.main-login-section .reward-details .rwd-content {
+  padding: 2rem;
+}
+.main-login-section .reward-details .rwd-content .r-heading {
+  font-size: 3rem;
+  letter-spacing: 4px;
+}
+.main-login-section .reward-details .rwd-content .r-heading span {
+  color: #ff0000;
+}
+.main-login-section .reward-details .rwd-content p {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-top: 0.7rem;
+}
+.main-login-section .reward-details .rwd-content .rewards {
+  display: flex;
+  padding: 1.8rem 0.4rem;
+  align-items: center;
+  border-bottom: 1px solid #a0a0a0;
+}
+.main-login-section .reward-details .rwd-content .rewards img {
+  width: 24px;
+  height: 24px;
+}
+.main-login-section .reward-details .rwd-content .rewards span {
+  margin-left: 0.7rem;
+  font-size: 1.4rem;
+}
+.main-login-section .reward-details .rwd-content .bd-no {
+  border: none;
+}
+
+.main-signup-section {
+  width: 100%;
+  margin-top: 5rem;
+  display: flex;
+  padding: 2rem 2%;
+  padding-bottom: 8rem;
+  justify-content: space-between;
+}
+.main-signup-section .signup-form {
+  width: 72%;
+}
+.main-signup-section .signup-form .s-heading {
+  text-transform: uppercase;
+  font-size: 2.6rem;
+  letter-spacing: 1px;
+}
+.main-signup-section .signup-form form {
+  width: 97%;
+  margin-top: 2rem;
+}
+.main-signup-section .signup-form form .input-container {
+  margin-top: 2.4rem;
+  font-family: "Tajawal Bold";
+  width: 100%;
+  display: flex;
+}
+.main-signup-section .signup-form form .input-container .input-content {
+  width: 100%;
+}
+.main-signup-section .signup-form form .input-container .input-content label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  width: 100%;
+}
+.main-signup-section .signup-form form .input-container .input-content input {
+  width: 90%;
+  padding: 1.5rem;
+  margin-top: 1rem;
+  border-radius: 10px;
+  font-size: 1.3rem;
+  border: 1px solid rgb(238, 237, 237);
+  box-shadow: 0px 0px 2px 2px #f1f0f0;
+}
+.main-signup-section .signup-form form .input-container .input-content select {
+  width: 90%;
+  padding: 1.5rem;
+  margin-top: 1rem;
+  border-radius: 10px;
+  font-size: 1.3rem;
+  border: 1px solid rgb(238, 237, 237);
+  box-shadow: 0px 0px 2px 2px #f1f0f0;
+  cursor: pointer;
+  position: relative;
+}
+.main-signup-section .signup-form form .input-container .input-content .custom-desn-nat {
+  position: absolute;
+  width: 25px;
+  height: 35px;
+  margin-left: -2.4rem;
+  margin-top: 1.4rem;
+  background-color: #fff;
+  cursor: pointer;
+}
+.main-signup-section .signup-form form .input-container .input-content .custom-desn-nat i {
+  font-size: 1.7rem;
+  margin-top: 1.2rem;
+}
+.main-signup-section .signup-form form .input-container .input-content .mbl-num {
+  display: flex;
+  gap: 1.4rem;
+}
+.main-signup-section .signup-form form .input-container .input-content .mbl-num select {
+  width: 20%;
+  padding: 1.5rem 1rem;
+  cursor: pointer;
+  position: relative;
+}
+.main-signup-section .signup-form form .input-container .input-content .mbl-num .custom-design {
+  position: absolute;
+  width: 25px;
+  height: 35px;
+  margin-left: 4.85rem;
+  margin-top: 1.4rem;
+  background-color: #fff;
+  cursor: pointer;
+}
+.main-signup-section .signup-form form .input-container .input-content .mbl-num .custom-design i {
+  font-size: 1.7rem;
+  margin-top: 1.2rem;
+}
+.main-signup-section .signup-form form .input-container .input-content .mbl-num input {
+  width: 61.4%;
+}
+.main-signup-section .signup-form form .signup-btn {
+  margin-top: 3rem;
+  justify-content: center;
+  text-align: center;
+}
+.main-signup-section .signup-form form .signup-btn button {
+  padding: 1rem;
+  width: 35%;
+  border-radius: 30px;
+  background-color: #e4e4e4;
+  margin-left: -2rem;
+  color: rgb(150, 150, 150);
+  transition: all 0.3s;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.main-signup-section .signup-form form .diff-link {
+  margin-top: 2.5rem;
+  text-align: center;
+}
+.main-signup-section .signup-form form .diff-link span {
+  font-size: 1.2rem;
+  color: rgb(150, 150, 150);
+}
+.main-signup-section .signup-form form .diff-link span a {
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  text-decoration: underline;
+}
+.main-signup-section .reward-details {
+  background-color: #f0f0f0;
+  width: 32%;
+  height: 33rem;
+}
+.main-signup-section .reward-details .rwd-content {
+  padding: 2rem;
+}
+.main-signup-section .reward-details .rwd-content .r-heading {
+  font-size: 3rem;
+  letter-spacing: 4px;
+}
+.main-signup-section .reward-details .rwd-content .r-heading span {
+  color: #ff0000;
+}
+.main-signup-section .reward-details .rwd-content p {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-top: 0.7rem;
+}
+.main-signup-section .reward-details .rwd-content .rewards {
+  display: flex;
+  padding: 1.8rem 0.4rem;
+  align-items: center;
+  border-bottom: 1px solid #a0a0a0;
+}
+.main-signup-section .reward-details .rwd-content .rewards img {
+  width: 24px;
+  height: 24px;
+}
+.main-signup-section .reward-details .rwd-content .rewards span {
+  margin-left: 0.7rem;
+  font-size: 1.4rem;
+}
+.main-signup-section .reward-details .rwd-content .bd-no {
+  border: none;
+}
+
+.signup-footer-for-mbl-tab {
+  display: none;
+  background-color: #FFE4E6;
+  width: 100%;
+  padding: 1.5rem;
+  padding-bottom: 9rem;
+}
+.signup-footer-for-mbl-tab h4 {
+  font-size: 3rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+.signup-footer-for-mbl-tab h4 span {
+  color: #ff0000;
+}
+.signup-footer-for-mbl-tab p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+.signup-btn-for-tm {
+  background-color: #fff;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 90px;
+  display: flex;
+  opacity: 0;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.signup-btn-for-tm button {
+  padding: 0.85rem;
+  width: 70%;
+  border-radius: 30px;
+  background-color: #e4e4e4;
+  color: rgb(150, 150, 150);
+  transition: all 0.3s;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 750px) {
+  .mbl-menu {
+    display: block;
+  }
+  .header-for-mbl {
+    visibility: visible;
+  }
+  .hide-for-tm {
+    display: none;
+  }
+  .reward-details {
+    background-color: #f0f0f0;
+    width: 32%;
+    display: none;
+  }
+  .main-login-section {
+    margin-top: 0;
+    padding-left: 2rem;
+    padding-bottom: 4rem;
+  }
+  .main-login-section .login-form {
+    width: 100%;
+  }
+  .main-login-section .login-form form .form-content input {
+    width: 97%;
+    padding: 1rem 4rem;
+    border-radius: 17px;
+    font-size: 1.2rem;
+  }
+  .main-login-section .login-form form .form-content span {
+    top: 51;
+    width: 40px;
+    height: 38px;
+    left: 0;
+    top: 24px;
+    border-radius: 17px;
+    padding: 1.91rem;
+  }
+  .main-login-section .login-form form .form-content span img {
+    width: 22px;
+    left: 13px;
+    top: 12px;
+  }
+  .main-login-section .login-form .f-heading {
+    font-size: 2rem;
+  }
+  .main-login-section .login-form form .remb-fgt {
+    width: 99%;
+  }
+  .main-login-section .login-form form .remb-ck-box label {
+    font-size: 1.2rem;
+  }
+  .main-login-section .login-form form .fgt-psw a {
+    font-size: 1.2rem;
+  }
+  .main-login-section .login-form form .login-btn button {
+    padding: 0.9rem;
+    width: 75%;
+  }
+  .main-login-section .login-form form .login-btn {
+    display: flex;
+    justify-content: center;
+  }
+  .main-login-section .login-form form .sigup-link {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+  }
+  .main-login-section .login-form form .sigup-link span {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  .main-signup-section .signup-form form .signup-btn {
+    display: none;
+  }
+  .signup-footer-for-mbl-tab {
+    display: block;
+  }
+  .signup-btn-for-tm {
+    opacity: 1;
+  }
+  .main-signup-section {
+    margin-top: 0;
+    padding-bottom: 4rem;
+  }
+  .main-signup-section .signup-form {
+    width: 100%;
+    padding-left: 1.5rem;
+  }
+  .main-signup-section .signup-form form .input-container {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .main-signup-section .signup-form form .input-container .input-content input {
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1.2rem;
+    border-radius: 17px;
+    font-size: 1.2rem;
+  }
+  .main-signup-section .signup-form form .input-container .input-content label {
+    font-size: 1.1rem;
+  }
+  .main-signup-section .signup-form form .input-container .input-content {
+    width: 100%;
+    margin-top: 2rem;
+  }
+  .main-signup-section .signup-form form .input-container .input-content select {
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 17px;
+    font-size: 1.2rem;
+  }
+  .main-signup-section .signup-form form .input-container .input-content .mbl-num select {
+    width: 90px;
+    padding: 1rem;
+  }
+  .main-signup-section .signup-form form .input-container .input-content .mbl-num input {
+    width: 100%;
+  }
+  .main-signup-section .signup-form form .input-container .input-content .mbl-num .custom-design {
+    position: absolute;
+    width: 22px;
+    border-radius: 15px;
+    height: 25px;
+    margin-left: 5.4rem;
+    margin-top: 1.4rem;
+  }
+  .main-signup-section .signup-form form .input-container .input-content .mbl-num .custom-design i {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+  .main-signup-section .signup-form form .input-container .input-content .custom-desn-nat {
+    width: 25px;
+    height: 25px;
+    border-radius: 20px;
+    margin-left: -2.2rem;
+    margin-top: 2rem;
+  }
+  .main-signup-section .signup-form form .input-container .input-content .custom-desn-nat i {
+    font-size: 1.5rem;
+    margin-top: 0.3rem;
+  }
+  .main-signup-section .signup-form .s-heading {
+    font-size: 1.7rem;
+    margin-bottom: -1.5rem;
+  }
+}/*# sourceMappingURL=login-signup.css.map */

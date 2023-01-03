@@ -1,0 +1,472 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;1,300&family=Tajawal:wght@300;400;500&family=Ubuntu:wght@300&display=swap');
+@import "navbar-func";
+
+* {
+    font-family: 'Tajawal', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+$red: #ff0000;
+$white-clr: #fff;
+$black-clr: rgb(0, 0, 0);
+$light-clr: rgb(179, 179, 179);
+
+html {
+    font-size: 75%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: $white-clr;
+
+}
+
+.navbar {
+    padding-top: 1.5rem;
+    width: 100%;
+
+    .hamburger {
+        position: absolute;
+        cursor: pointer;
+        display: none;
+        z-index: 9999;
+        transition: .4s ease-in-out;
+
+        .line {
+            width: 30px;
+            height: 4px;
+            margin: 5px 3px;
+            background-color: #000;
+        }
+    }
+
+    .nav-main {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1.5%;
+        align-items: center;
+
+        .logo {
+            text-decoration: none;
+            font-size: 3.4rem;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: black;
+            z-index: 9999;
+            letter-spacing: 7px;
+        }
+
+        span {
+            color: red;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+
+            
+            .nav-main-link-active{
+                border-bottom: 3px solid $black-clr;
+                a{
+                   font-weight: 600;
+                }
+           }
+
+            li {
+                list-style: none;
+                margin-left: 2rem;
+                display: flex;
+                cursor: pointer;
+                padding: 0 .8rem 0 1.2rem;
+                align-items: center;
+                transition: all .4s ease-out;
+             
+                &:hover{
+                    background-color: #000;
+                }
+
+                &:hover a{
+                     color: #fff;
+                }
+                &:hover i{
+                    color: #ff0000;
+                }
+
+            a {
+                text-decoration: none;
+                color: black;
+                display: flex;
+                font-weight: 500;
+                padding: .5rem 0;
+                font-size: 1.3rem;
+                letter-spacing: 1px;
+                position: relative;
+                align-items: center;
+                transition: all .3s ease-in-out;
+
+            }
+            .active-hover{
+                 color: #ff0000;
+            }
+
+            i {
+                color: $black-clr;
+                cursor: pointer;
+                padding: 1rem .4rem 1rem .5rem;
+                font-size: 1.5rem;
+                margin-top: -.2rem;
+                transition: all .3s ease-in-out;
+                // z-index: 99;
+
+                &:hover #women{
+                    @include hoverdropdown();
+                 }
+                 &:hover #men{
+                    @include hoverdropdown();
+                 }
+                 &:hover #boy{
+                    @include hoverdropdown();
+                 }
+                 &:hover #girl{
+                    @include hoverdropdown();
+                 }
+                 &:hover #homeware{
+                    @include hoverdropdown();
+                 }
+
+                #women{
+                    @include navdropdown();
+                }
+                #men{
+                    @include navdropdown();
+                }
+                #boy{
+                    @include navdropdown();
+                }
+                #girl{
+                    @include navdropdown();
+                }
+                #homeware{
+                    @include navdropdown();
+                }
+             }
+
+          }
+        }
+
+        form {
+            display: flex;
+            position: relative;
+            margin-left: 8rem;
+
+            input {
+                height: 40px;
+                width: 300px;
+                padding: 1.2rem 3rem;
+                font-size: 1.2rem;
+                border-radius: 30px;
+                border: 1px solid gray;
+                color: #000;
+                background-color: #fff;
+            }
+
+            label {
+                position: absolute;
+                left: 12px;
+                top: 11px;
+                cursor: pointer;
+                color: #000;
+                border: none;
+                font-size: 1.5rem;
+                transition: .5s ease-in-out;
+
+                &:hover {
+                    color: rgb(255, 18, 18);
+                }
+            }
+        }
+
+        .nav-icons {
+            display: flex;
+            margin-left: 1rem;
+
+            img {
+                width: 25px;
+                height: 25px;
+                margin-left: 1rem;
+            }
+        }
+    }
+
+}
+
+.search-for-tm {
+    margin-top: .4rem;
+    display: none;
+
+    form {
+        display: flex;
+        justify-content: center;
+
+        position: relative;
+
+        input {
+            height: 40px;
+            width: 94%;
+            padding: 1rem 3rem;
+            font-size: 1.4rem;
+            border: 1px solid gray;
+            color: #000;
+            border-radius: 4px;
+            background-color: #fff;
+        }
+
+        label {
+            position: absolute;
+            left: 34px;
+            top: 12px;
+            cursor: pointer;
+            color: #000;
+            border: none;
+            font-size: 1.4rem;
+            transition: .5s ease-in-out;
+
+            &:hover {
+                color: rgb(255, 18, 18);
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width:1350px) {
+    .navbar .nav-main form {
+        margin-left: 2rem;
+        width: 240px;
+    }
+
+    .navbar .nav-main {
+        padding: 0 1.5%;
+    }
+}
+
+@media only screen and (max-width:1200px) {
+      
+    .navbar .nav-main .nav-menu li{
+        margin-left: .6rem;
+    }
+}
+
+@media only screen and (max-width:1100px) {
+
+    .navbar .nav-main form {
+        margin-left: .5rem;
+        width: 220px;
+    }
+    .navbar .nav-main .nav-menu li{
+        margin-left: .2rem;
+        padding: 0 0.5rem 0 1rem;
+    }
+    .navbar .nav-main .nav-icons img {
+        margin-left: .5rem;
+    }
+
+}
+
+@media only screen and (max-width:990px) {
+
+    .navbar .hamburger {
+        display: block;
+        top: 30px;
+        left: 3%;
+    }
+
+    .navbar .nav-main .nav-menu {
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-left: -120rem;
+        height: 100vh;
+        width: 30rem;
+        z-index: 999;
+        padding-top: 7rem;
+        background-color: #fff;
+        box-shadow: 0 3px 2px 100vw rgba(0, 0, 0, 0.4);
+        transition: all .4s ease-in-out;
+    }
+
+    .navbar .nav-main .active {
+        margin-left: 0;
+    }
+
+    .navbar .nav-main .logo {
+        margin-left: 5rem;
+    }
+
+    .navbar .nav-main .nav-menu li {
+        margin-left: -5rem;
+        margin-top: .4rem;
+        text-align: left;
+    }
+
+    .navbar .nav-main .nav-icons {
+        margin-right: 1rem;
+    }
+
+    .navbar .nav-main form {
+        width: 300px
+    }
+
+    .closeburger .line1 {
+        transform: translateY(200%) rotate(45deg);
+        transition: .4s ease-in-out;
+    }
+
+    .closeburger .line2 {
+        opacity: 0;
+    }
+
+    .closeburger .line3 {
+        transform: translateY(-200%) rotate(135deg);
+        transition: .4s ease-in-out;
+    }
+}
+
+@media only screen and (max-width:720px) {
+    .navbar .nav-main form {
+        display: none;
+    }
+
+    .search-for-tm {
+        display: block;
+
+    }
+}
+
+@media only screen and (max-width:550px) {
+
+    .navbar .nav-main .nav-menu{
+        padding-top: 5.5rem;
+    }
+  
+    .navbar .nav-main .nav-menu li {
+        margin-left: -10rem;
+    }
+    .search-for-tm form input {
+        height: 35px;
+        width: 93%;
+        padding: 1rem 2.8rem;
+        font-size: 1.2rem;
+    }
+
+    .search-for-tm form label {
+        position: absolute;
+        left: 24px;
+        top: 10px;
+        cursor: pointer;
+        color: #000;
+        border: none;
+        font-size: 1.2rem;
+        transition: 0.5s ease-in-out;
+    }
+    .navbar .nav-main .logo {
+        margin-left: 4.2rem;
+    }
+        
+    .navbar {
+        padding-top: 1rem;
+    }
+     .navbar .nav-main .logo {
+        font-size: 2.8rem;
+        letter-spacing: 3px;
+    }
+    .navbar .hamburger {
+        left: 3.7%;
+        top: 19px;
+    }
+
+}
+
+@media only screen and (max-width:450px) {
+    
+    .navbar {
+        padding-top: 0.7rem;
+        align-items: center;
+    }
+    .navbar .nav-main .nav-menu {
+        width: 90%;
+        padding-top: 4.4rem;
+    }
+    .navbar .nav-main .nav-menu li {
+        margin-left: -13.5rem;
+    }
+    .navbar .nav-main .nav-menu li a{
+         font-size: 1.2rem;
+    }
+    .navbar .nav-main .logo {
+        font-size: 2.4rem;
+        letter-spacing: 3px;
+        margin-left: 4rem;
+    }
+
+    .navbar .hamburger {
+        left: 3.6%;
+        top: 16px;
+    }
+
+    .navbar .hamburger .line {
+        width: 25px;
+        height: 4px;
+        margin: 3px 3px;
+        background-color: #000;
+    }
+
+    .search-for-tm {
+
+        margin-top: 0.8rem;
+    }
+
+    .navbar .nav-main .nav-icons {
+        margin-right: .8rem;
+    }
+
+    .navbar .nav-main .nav-icons img {
+        margin-left: .6rem;
+    }
+    
+    .navbar .nav-main .nav-menu li i #women li a,
+    .navbar .nav-main .nav-menu li i #men li a,
+    .navbar .nav-main .nav-menu li i #girl li a,
+    .navbar .nav-main .nav-menu li i #boy li a,
+    .navbar .nav-main .nav-menu li i #homeware li a {
+        font-size: 1.1rem;
+    }
+}
+
+@media only screen and (max-width:420px) {
+    .navbar .nav-main .nav-menu li {
+        margin-left: -13rem;
+    }
+}
+@media only screen and (max-width:390px) {
+    .navbar .nav-main .nav-menu li {
+        margin-left: -12rem;
+    }
+}
+@media only screen and (max-width:370px) {
+    .navbar .nav-main .nav-menu li {
+        margin-left: -10.5rem;
+    }
+}
+@media only screen and (max-width:350px) {
+    .navbar .nav-main .nav-menu li {
+        margin-left: -8.5rem;
+    }
+}
